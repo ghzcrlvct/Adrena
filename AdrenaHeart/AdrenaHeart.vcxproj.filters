@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="img.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="def.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="mem.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ptr.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="str.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="tp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="nt.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="mod.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="hrt.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="flist.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="unpk.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="vm.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="mut.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="schd.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="img.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="mem.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ptr.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="str.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="tp.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="util.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="mod.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="flist.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="unpk.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="vm.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="mut.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="schd.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="vm.asm">
+      <Filter>Source</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
