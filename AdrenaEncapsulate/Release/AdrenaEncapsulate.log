@@ -1,0 +1,14 @@
+﻿  Main.cpp
+C:\Users\Xora\Desktop\AdrenaEncapsulate\Pack.hpp(131,28): warning C4244: '=': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\Xora\Desktop\AdrenaEncapsulate\Pack.hpp(621,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Xora\Desktop\AdrenaEncapsulate\Pack.hpp(643): message : see reference to function template instantiation 'float ShannonEntropy<unsigned char>(T [],int)' being compiled
+          with
+          [
+              T=unsigned char
+          ]
+  Generating code
+  17 of 201 functions ( 8.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  AdrenaEncapsulate.vcxproj -> C:\Users\Xora\Desktop\AdrenaEncapsulate\Release\AdrenaEncapsulate.exe

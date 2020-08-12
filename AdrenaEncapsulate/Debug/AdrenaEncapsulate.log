@@ -1,0 +1,6 @@
+﻿  Main.cpp
+C:\Users\Xora\Desktop\AdrenaEncapsulate\Definitions.hpp(90,10): warning C4473: 'printf' : not enough arguments passed for format string
+C:\Users\Xora\Desktop\AdrenaEncapsulate\Definitions.hpp(90,10): message : placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+C:\Users\Xora\Desktop\AdrenaEncapsulate\Definitions.hpp(90,10): message : the missing variadic argument 1 is required by format string '% A'
+C:\Users\Xora\Desktop\AdrenaEncapsulate\Pack.hpp(78,28): warning C4244: '=': conversion from 'double' to 'unsigned int', possible loss of data
+  AdrenaEncapsulate.vcxproj -> C:\Users\Xora\Desktop\AdrenaEncapsulate\Debug\AdrenaEncapsulate.exe
