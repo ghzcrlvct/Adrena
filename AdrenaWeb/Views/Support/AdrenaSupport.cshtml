@@ -1,0 +1,35 @@
+﻿<style>
+    .AdrenaSmallText {
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 15px;
+    }
+</style>
+
+<div class="AdrenaSmallText">
+    @{
+        bool AdrenaIsOnline() {
+            return (DateTime.Now.Hour <= 22 && DateTime.Now.Hour >= 13);
+        }
+        int AdrenaHoursUntilOnline() {
+            return (DateTime.Now.Hour - 13);
+        }
+
+        int UntOn = System.Math.Abs(AdrenaHoursUntilOnline());
+    }
+    @if (AdrenaIsOnline()) {
+        <div style="color:#4cff00">SUPPORT IS ONLINE!</div>
+    }
+    else {
+        <div style="color:#ff0000">SUPPORT IS OFFLINE! YOU MAY SEND AND E-MAIL AND WILL RECEIVE AN ANSWER AS SOON AS POSSIBLE!<br />
+        OTHERWISE, YOU CAN WAIT FOR THE SUPPORT TO COME ONLINE IN @UntOn HOUR(S)!</div>
+    }
+<div>
+    <br />
+    DISCORD: <a href="https://discord.gg/Uhuf3xs">JOIN</a>
+    <br />
+    SKYPE: <a href="https://join.skype.com/invite/e8htd7gbQa0r">JOIN</a>
+    <br />
+    E-MAIL: adrena_support@protonmail.com
+</div>
+</div>

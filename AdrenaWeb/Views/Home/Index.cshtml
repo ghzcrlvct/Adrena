@@ -1,0 +1,80 @@
+﻿<style>
+    table {
+        width: 100%;
+        text-align: center;
+        border: 1px solid #FFF;
+        padding: 10px;
+    }
+    th {
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+    td {
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 13px;
+        text-align: center;
+        border: 1px solid #FFF;
+        padding: 10px;
+    }
+</style>
+<center>
+    @{DateTime Last = new DateTime(2020, 8, 12); TimeSpan Psd = DateTime.Now - Last; int DysPsd = Psd.Days; }
+    <div class="AdrenaText" style="color:#00ff21">Last software update occured @DysPsd days ago!</div>
+    <br /><br />
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Changes</th>
+        </tr>
+        <tr>
+            <td style="color:#ff00dc">FIX</td>
+            <td>0.1.1</td>
+            <td>12th of August, 2020</td>
+            <td>
+                <div style="color:#4cff00">
+                    • Removed Debug and Rich information from the protected file
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="color:#ff0000">UPDATE</td>
+            <td>0.1.1</td>
+            <td>12th of August, 2020</td>
+            <td>
+                <div style="color:#4cff00">
+                    • Fixed an issue where executables were misidentified as being .NET binaries
+                </div><br />
+                <div style="color:#4cff00">
+                    • Removed all dependencies (It used to be dependent on the C-Runtime libraries)
+                </div><br />
+                <div style="color:#00ffff">
+                    • Tweaked the packer for better entropy
+                </div><br />
+                <div style="color:#00ffff">
+                    • Tweaked the layout of the website to make it easier to use
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="color:#ff00dc">FIX</td>
+            <td>0.1</td>
+            <td>8th of August, 2020</td>
+            <td>
+                <div style="color:#4cff00">
+                    • Fixed an issue with the "Manual Loader" feature's import resolver
+                </div><br />
+                <div style="color:#ff6a00">
+                    • The "Code Mutilation" feature is temporarily disabled due to the fact that it sometimes malfunctioned
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="AdrenaText"></div>
+</center>

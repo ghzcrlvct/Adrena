@@ -1,0 +1,53 @@
+﻿<center>
+    @using (Html.BeginForm("AdrenaUpload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    <div>
+        <div class="AdrenaText">MEMBER SECRET</div>
+        <input type="text" name="MemberSecret" maxlength="40" size="30" />
+        <br /><br />
+
+        <div class="AdrenaText">VERSION</div>
+        <select name="AdrenaVersion" style="background-color:#000;color:#FFF;width:75%">
+            <option>0.1.1</option>
+            <option>0.1</option>
+        </select>
+        <br /><br />
+
+        <div style="overflow:hidden">
+            <input type="file" id="AdrenaFilePickID" name="Data" />
+        </div>
+        <img src="~/AdrenaUpload.png" id="AdrenaImageID" style="max-height: 8%; max-width: 8%; cursor:pointer"
+             onclick="AdrenaPickFile();" />
+        <br />
+
+        <input type="image" src="~/AdrenaProtect.png" style="max-height: 8%; max-width: 8%" border="0" />
+        <br />
+
+        @{
+            if (!string.IsNullOrEmpty(ViewBag.ProtectLink)) {
+                <a href=@ViewBag.ProtectLink><img src="~/AdrenaDownload.png" style="max-height: 8%; max-width: 8%" /></a>
+            }
+            <br /><br />
+            if (!string.IsNullOrEmpty(ViewBag.LastError)) {
+                if (!string.IsNullOrEmpty(ViewBag.MemberName)) {
+                    <div class="AdrenaText">SORRY, @ViewBag.MemberName! SOMETHING WENT WRONG! (@ViewBag.LastError)</div>
+                }
+                else {
+                    <div class="AdrenaText">SORRY, SOMETHING WENT WRONG! (@ViewBag.LastError)</div>
+                }
+            }
+            else {
+                if (!string.IsNullOrEmpty(ViewBag.MemberName)) {
+                    <div class="AdrenaText">HI, @ViewBag.MemberName! YOUR PROGRAM HAS BEEN PROTECTED SUCCESFULLY!</div>
+                    <div class="AdrenaText">YOUR FILE HAS BEEN IDENTIFIED AS @ViewBag.Identification</div>
+                }
+            }
+        }
+    </div>
+    }
+</center>
+
+<script>
+    function AdrenaPickFile() {
+        $("#AdrenaFilePickID").click();
+    }
+</script>

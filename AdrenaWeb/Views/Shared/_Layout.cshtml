@@ -1,0 +1,122 @@
+﻿<style>
+    .AdrenaTable {
+        width: 100%;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Tahoma;
+        font-weight: normal;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .AdrenaTableElement {
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Tahoma;
+        font-weight: normal;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .AdrenaSmallText {
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 12px;
+    }
+
+    .AdrenaSmallText2 {
+        color: #706e70;
+        font-family: Tahoma;
+        font-size: 15px;
+    }
+
+    .AdrenaText2 {
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .AdrenaText {
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .AdrenaSection {
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 25px;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    input[type="text"] {
+        background-color: #000;
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 15px;
+        border: 1px, solid #FFF;
+    }
+
+
+    ul li {
+        width: 100%;
+        display: inline;
+    }
+</style>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADRENA</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color:#000">
+    <center>
+        @{
+            var HomeLnk = Url.Action("Index", "Home", null, Request.Url.Scheme);
+            var PurLnk = Url.Action("AdrenaPurchase", "Purchase", null, Request.Url.Scheme);
+            var SrcLnk = Url.Action("AdrenaSourceCode", "SourceCode", null, Request.Url.Scheme);
+            var UpLnk = Url.Action("AdrenaUpload", "Upload", null, Request.Url.Scheme);
+            var AdmLnk = Url.Action("AdrenaAddMember", "AddMember", null, Request.Url.Scheme);
+            var LglLnk = Url.Action("AdrenaLegal", "Legal", null, Request.Url.Scheme);
+            var SpLnk = Url.Action("AdrenaSupport", "Support", null, Request.Url.Scheme);
+        }
+        <img src="~/AdrenaLogoText.jpg" style="max-height:20%;max-width:20%" />
+        <br />
+        <ul>
+            <li><a href=@HomeLnk><div class="AdrenaText2">HOME</div></a></li>
+            <li><a href=@UpLnk><div class="AdrenaText2">PROTECT FILE</div></a></li>
+            <li><a href=@SpLnk><div class="AdrenaText2">SUPPORT</div></a></li>
+        </ul>
+        <br />
+        <hr />
+        <br />
+    </center>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <center>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div style="display:inline">
+            <a href=@PurLnk><div class="AdrenaSmallText2">WHERE TO PURCHASE</div></a>
+            <a href=@SrcLnk><div class="AdrenaSmallText2">SOURCE CODE</div></a>
+            <a href=@LglLnk><div class="AdrenaSmallText2">LEGAL INFORMATION</div></a>
+            <a href=@AdmLnk><div class="AdrenaSmallText2">MASTER PANEL</div></a>
+        </div>
+        <br />
+    </center>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<center>
+    @using (Html.BeginForm("AdrenaAddMember", "AddMember", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    <div>
+        <div class="AdrenaText">MASTER SECRET</div>
+        <input type="text" name="MasterSecret" maxlength="40" size="30" />
+        <br /><br />
+
+        <div class="AdrenaText">MEMBER NAME</div>
+        <input type="text" name="Name" maxlength="25" size="30" />
+        <br /><br />
+
+        <div class="AdrenaText">MEMBER SECRET</div>
+        <input type="text" name="Secret" maxlength="40" size="30" />
+        <br /><br />
+
+        <div class="AdrenaText">OPTIONS</div>
+        <input type="text" name="Options" maxlength="25" size="30" />
+        <br /><br />
+
+        <input style="border: 1px solid #FFF; background-color: #000; color: #FFF; font-family: Tahoma" type="submit" value="PERFORM ACTION">
+        <br /><br />
+
+        @if (!string.IsNullOrEmpty(ViewBag.LastError)) {
+            <div class="AdrenaText">LAST ERROR: @ViewBag.LastError</div>
+        }
+        @if (!string.IsNullOrEmpty(ViewBag.Secret)) {
+            <div class="AdrenaText">SECRET: @ViewBag.Secret</div>
+        }
+        @{ if (true == ViewBag.Success) {
+                    <table class="AdrenaTable">
+                        <tr class="AdrenaTableElement">
+                            <th class="AdrenaTableElement">NAME</th>
+                            <th class="AdrenaTableElement">SECRET</th>
+                            <th class="AdrenaTableElement">TIME SINCE REGISTRATION</th>
+                            <th class="AdrenaTableElement">NUMBER OF UPLOADS</th>
+                            <th class="AdrenaTableElement">SINGLE USE</th>
+                        </tr>
+                        @{
+                            List<ADRENA_MEMBER> Members;
+                            AdrenaMemberHelper.AdrenaMemberGetAll(out Members, Server.MapPath("~/AdrenaMembers"));
+
+                            foreach (ADRENA_MEMBER CurrMb in Members) {
+                                TimeSpan Spn = DateTime.Now - new DateTime(CurrMb.BuyTimeTick);
+
+                                System.Text.StringBuilder SinceReg = new System.Text.StringBuilder();
+                                SinceReg.AppendFormat("{0} DAYS, {1} HOURS, {2} MINUTES", Spn.Days, Spn.Hours, Spn.Minutes);
+                                string SncRg = SinceReg.ToString();
+                                string IsSngUse = (0 != CurrMb.IsSingleUse) ? "YES" : "NO";
+
+                                <tr class="AdrenaTableElement">
+                                    <th class="AdrenaTableElement">@CurrMb.Name</th>
+                                    <th class="AdrenaTableElement">@CurrMb.Secret</th>
+                                    <th class="AdrenaTableElement">@SncRg</th>
+                                    <th class="AdrenaTableElement">@CurrMb.NumberOfUploads</th>
+                                    <th class="AdrenaTableElement">@IsSngUse</th>
+                                </tr>
+                            }
+                        }
+                    </table>
+                }
+            }
+    </div>
+    }
+</center>
